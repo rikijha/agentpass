@@ -144,10 +144,4 @@ tests/         28 tests: policy unit tests + end-to-end gateway tests
 4. **Real tools:** Gmail API + a grocery API for the personal agent app
 5. OPA/Cedar policies, OpenTelemetry traces, Postgres
 
-## Publish to GitHub
-
-```bash
-./scripts/publish_github.sh            # creates github.com/<you>/agentpass and pushes
-```
-
 MIT licensed.
