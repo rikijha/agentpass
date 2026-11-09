@@ -37,6 +37,8 @@ Requires Python 3.10 or newer (`brew install python@3.12` if needed).
 
 ## Dashboard
 
+![AgentPass dashboard: agents with their limits, revoked agents, and the live audit log](docs/dashboard.png)
+
 `./run.sh server` serves a dashboard at http://127.0.0.1:8000/ where you can:
 
 - **Add an agent:** name, owner, purpose; pick its tools and set limits (max per call, approval threshold, rolling budget, always ask). You can also grant access to a user in the same step. The agent's private key is shown once, with a download button and a ready-to-paste Python snippet.
