@@ -1,0 +1,19 @@
+# AgentPass policies, keyed by agent name. Anything not listed here is denied.
+# Amounts are in INR.
+
+agents:
+  grocery-agent:
+    tools:
+      shop.search: {}
+      shop.checkout:
+        max_amount: 3000            # never more than this in one order
+        budget:
+          amount: 5000              # rolling cap
+          period_days: 7
+        require_approval_above: 1500  # a human approves bigger orders
+
+  email-agent:
+    tools:
+      gmail.read: {}
+      gmail.send:
+        require_approval: true      # never sends mail without you

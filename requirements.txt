@@ -1,0 +1,7 @@
+starlette>=0.37
+uvicorn>=0.29
+PyJWT[crypto]>=2.8
+cryptography>=42
+PyYAML>=6.0
+requests>=2.31
+pytest>=8.0

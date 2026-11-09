@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentpass"
+version = "0.1.0"
+description = "Identity, permission and audit gateway for AI agents"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Vanshi Chokshi" }]
+dependencies = [
+    "starlette>=0.37",
+    "uvicorn>=0.29",
+    "PyJWT[crypto]>=2.8",
+    "cryptography>=42",
+    "PyYAML>=6.0",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+agentpass = "agentpass.__main__:main"
+
+[tool.setuptools]
+packages = ["agentpass"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
